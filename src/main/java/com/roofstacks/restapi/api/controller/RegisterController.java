@@ -30,7 +30,7 @@ public class RegisterController {
 
     @GetMapping("/register-lists")
     @ResponseBody
-    public ResponseEntity<String> register() {
+    public ResponseEntity<String> getUserList() {
         return ResponseEntity.status(HttpStatus.OK).body(userListService.getUserList().toString());
     }
 }

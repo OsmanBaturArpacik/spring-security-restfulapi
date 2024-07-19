@@ -6,9 +6,9 @@ import lombok.Getter;
 import java.io.Serializable;
 
 @Data
-@Getter
 public class User implements Serializable {
     private static final long serialVersionUID = 1L;
+    @Getter
     private String username;
     private String password;
     public User(String username, String password) {
