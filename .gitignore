@@ -33,4 +33,4 @@ build/
 .vscode/
 
 ### ser ###
-!user_list.ser
+user_list.ser
