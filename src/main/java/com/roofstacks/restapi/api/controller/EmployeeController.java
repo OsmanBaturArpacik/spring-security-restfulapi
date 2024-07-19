@@ -20,7 +20,7 @@ public class EmployeeController {
     }
 
 
-    @PostMapping("employee")
+    @PostMapping("/employee")
     @ResponseBody
     public ResponseEntity<String> setNameToListAndWelcomeMessage(@RequestParam("name") String name, @RequestParam("roleId") int roleId) {
         if(name.isEmpty()) {
@@ -33,7 +33,7 @@ public class EmployeeController {
 
 
     //request query param
-    @GetMapping("employee")
+    @GetMapping("/employee")
     @ResponseBody
     public ResponseEntity<String> getUserByIdQueryParam(@RequestParam("id") int id) {
         Optional user = employeeService.getUserById(id);
@@ -46,7 +46,7 @@ public class EmployeeController {
 
 
     //uri path param
-    @GetMapping("employee/{id}")
+    @GetMapping("/employee/{id}")
     @ResponseBody
     public ResponseEntity<String> getUserByIdPathParam(@PathVariable("id") int id) {
         Optional user = employeeService.getUserById(id);
