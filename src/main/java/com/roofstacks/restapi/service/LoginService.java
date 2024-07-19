@@ -8,4 +8,11 @@ public class LoginService {
     public LoginService() {
 
     }
+    public String login() {
+        return "test";
+    }
+
+    public void logout() {
+
+    }
 }
