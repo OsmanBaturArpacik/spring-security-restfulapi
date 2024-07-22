@@ -7,7 +7,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-import com.roofstacks.restapi.api.config.SecurityConfig;
+import com.roofstacks.restapi.api.security.SecurityConfig;
 import com.roofstacks.restapi.service.TokenService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +17,7 @@ import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 
-
+//TODO: Test is old, now we are not using http basic authentication.
 @WebMvcTest({ HomeController.class, AuthController.class })
 @Import({ SecurityConfig.class, TokenService.class })
 class HomeControllerTest {
