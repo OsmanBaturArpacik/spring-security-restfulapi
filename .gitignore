@@ -32,5 +32,8 @@ build/
 ### VS Code ###
 .vscode/
 
-### ser ###
-user_list.ser
+#### ser ###
+#user_list.ser
+#
+#### key ###
+#src/main/resources/certs
