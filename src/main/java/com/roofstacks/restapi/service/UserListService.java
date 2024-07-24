@@ -2,7 +2,6 @@ package com.roofstacks.restapi.service;
 
 import com.roofstacks.restapi.api.model.User;
 import lombok.Getter;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.*;
@@ -13,8 +12,8 @@ import java.util.List;
 public class UserListService {
     @Getter
     private List<User> userList = new ArrayList<>();
-
     private static final String FILE_NAME = "user_list.ser";
+
     public void saveUserList() {
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FILE_NAME))) {
             oos.writeObject(userList);

@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 public class RegisterController {
     private RegisterService registerService;
     private UserListService userListService;
+
     @Autowired
     public RegisterController(RegisterService registerService, UserListService userListService) {this.registerService = registerService;this.userListService = userListService;}
 

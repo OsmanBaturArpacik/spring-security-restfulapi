@@ -16,10 +16,12 @@ public class EmployeeService {
     public EmployeeService() {
 
     }
+
     public void setUser(Employee employee) {
         this.employee = employee;
         employeeList.add(employee);
     }
+
     public Optional<Employee> getUserById(int id) {
         Optional optional = Optional.empty();
         for (Employee employee : employeeList) {

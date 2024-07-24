@@ -7,12 +7,13 @@ import java.util.List;
 
 @Service
 public class JsonSerializationService {
+
     public static String serialize(Object object) {
         ObjectMapper mapper = new ObjectMapper();
         try{
             return mapper.writeValueAsString(object);
         }catch (Exception e){
-            //daha sonra bakarız
+
         }
         return null;
     }

@@ -13,5 +13,4 @@ public class Employee {
         this.name = name;
         this.roleId = roleId;
     }
-
 }

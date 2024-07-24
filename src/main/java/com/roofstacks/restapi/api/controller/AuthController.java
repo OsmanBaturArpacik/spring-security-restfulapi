@@ -13,7 +13,6 @@ import org.slf4j.LoggerFactory;
 
 @RestController
 public class AuthController {
-
     private static final Logger LOG = LoggerFactory.getLogger(AuthController.class);
     private final TokenService tokenService;
     private final AuthenticationManager authenticationManager;
@@ -22,7 +21,6 @@ public class AuthController {
         this.tokenService = tokenService;
         this.authenticationManager = authenticationManager;
     }
-
 
     @PostMapping("/token")
     public String token(@RequestBody LoginRequest userLogin) {
