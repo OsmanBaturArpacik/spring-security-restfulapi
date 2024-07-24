@@ -14,8 +14,4 @@ public class AppConfig {
     public RestTemplate restTemplate(RestTemplateBuilder builder, List<ClientHttpRequestInterceptor> interceptors) {
         return builder.interceptors(interceptors).build();
     }
-//    @Bean
-//    public RestTemplate restTemplate() {
-//        return new RestTemplate();
-//    }
 }

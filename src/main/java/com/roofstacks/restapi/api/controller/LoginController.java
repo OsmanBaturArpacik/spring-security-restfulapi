@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/auth")
 public class LoginController {
     private LoginService loginService;
+
     @Autowired
     public LoginController(LoginService loginService) {this.loginService = loginService;}
 
@@ -23,5 +24,4 @@ public class LoginController {
     public ResponseEntity<String> logout() {
         return ResponseEntity.status(HttpStatus.OK).body("Ok");
     }
-
 }

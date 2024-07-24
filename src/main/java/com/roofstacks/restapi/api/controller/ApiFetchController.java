@@ -2,8 +2,6 @@ package com.roofstacks.restapi.api.controller;
 
 import com.roofstacks.restapi.api.model.UserDto;
 import com.roofstacks.restapi.service.ApiFetchService;
-import com.roofstacks.restapi.service.JsonDeserializationService;
-import com.roofstacks.restapi.service.JsonSerializationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,14 +15,10 @@ import static com.roofstacks.restapi.service.JsonSerializationService.serialize;
 @RequestMapping("/fetch")
 public class ApiFetchController {
     private ApiFetchService apiFetchService;
-    private JsonDeserializationService jsonDeserializationService;
-    private JsonSerializationService jsonSerializationService;
 
     @Autowired
-    public ApiFetchController(ApiFetchService apiFetchService, JsonDeserializationService jsonDeserializationService, JsonSerializationService jsonSerializationService) {
+    public ApiFetchController(ApiFetchService apiFetchService) {
         this.apiFetchService = apiFetchService;
-        this.jsonDeserializationService = jsonDeserializationService;
-        this.jsonSerializationService = jsonSerializationService;
     }
 
     @GetMapping("/posts")

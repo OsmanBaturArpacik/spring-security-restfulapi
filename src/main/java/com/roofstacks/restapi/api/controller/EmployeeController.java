@@ -13,12 +13,10 @@ import java.util.Optional;
 public class EmployeeController {
     private EmployeeService employeeService;
 
-
     @Autowired
     public EmployeeController(EmployeeService employeeService) {
         this.employeeService = employeeService;
     }
-
 
     @PostMapping("/employee")
     @ResponseBody
@@ -31,7 +29,6 @@ public class EmployeeController {
         return ResponseEntity.status(HttpStatus.OK).body("User (id: " + employee.getId() +")  successfully added to list.");
     }
 
-
     //request query param
     @GetMapping("/employee")
     @ResponseBody
@@ -43,7 +40,6 @@ public class EmployeeController {
         }
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User (id: " + id +") is not exist.");
     }
-
 
     //uri path param
     @GetMapping("/employee/{id}")
